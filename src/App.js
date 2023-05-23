@@ -13,14 +13,18 @@ function App() {
 	const addAnimal = () => {
 		setAnimals([
 			...animals,
-			<AnimalShow type={getRandomAnimal()} />
+			getRandomAnimal()
 		]);
 	};
+
+	const renderedAnimals = animals.map(
+		(animal, index) => <AnimalShow type={animal} key={index} />
+	);
 
 	return (
 		<div>
 			<button onClick={addAnimal}>Add Animal</button>
-			<p>{animals}</p>
+			<div>{renderedAnimals}</div>
 		</div>
 	);
 };
