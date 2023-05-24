@@ -31,7 +31,7 @@ function AnimalShow({ type }) {
 
 	return (
 		<div onClick={handleClick}>
-			<img src={svgMap[type]} alt={type} height={200} />
+			<img src={svgMap[type]} alt={type} />
 			<img src={heart} alt="heart" height={heartSize} />
 		</div>
 	);
