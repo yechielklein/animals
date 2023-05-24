@@ -1,3 +1,5 @@
+import './AnimalShow.css';
+
 import { useState } from 'react';
 
 import alligator from './svg/alligator.svg';
