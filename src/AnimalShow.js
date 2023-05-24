@@ -20,19 +20,19 @@ const svgMap = {
 };
 
 function AnimalShow({ type }) {
-	const [heartSize, setHeartSize] = useState(20);
+	const [heartSize, setHeartSize] = useState(10);
 	const handleClick = () => {
 		if (heartSize >= 200) {
 			return
 		};
 
-		setHeartSize(heartSize + 20);
+		setHeartSize(heartSize + 10);
 	};
 
 	return (
-		<div onClick={handleClick}>
-			<img src={svgMap[type]} alt={type} />
-			<img src={heart} alt="heart" height={heartSize} />
+		<div className="animal-show" onClick={handleClick}>
+			<img className="animal" src={svgMap[type]} alt={type} />
+			<img className="heart" src={heart} alt="heart" style={{width: heartSize}} />
 		</div>
 	);
 };
